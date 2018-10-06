@@ -9,6 +9,12 @@ public class MainApp {
 	static ScoreClass playerScore = new ScoreClass();
 
 	
+	/**
+	 * Prints Game Rules and High Score
+	 * @print High Score
+	 * @author Diego Camacho 
+	 */
+	
 	public static void  PrintRules() {
 		System.out.println("-----------------");
 		System.out.println("Match the word to its definition to earn points!\n"
@@ -18,7 +24,10 @@ public class MainApp {
 		System.out.println("High Score: " + playerScore.GetHighScore());
 		System.out.println("-----------------\n");
 	}
-
+	
+	/**
+	 * Main Game Loop
+	 */
 	public static void main(String[] args) {
 		
 		
@@ -34,11 +43,19 @@ public class MainApp {
 				Continue = false;
 				return;
 			}
+			else {
+				System.out.println("Invalid Input!");
+			}
 		}
 		
 		scanner.CloseScanner();
 		
 	}
+	
+	/**
+	 *Game Loop
+	 *Active while {@code GameOver} does not equal to true.
+	 */
 	
 	static void  PlayGame() {
 		while(!GameOver) {
@@ -70,8 +87,10 @@ public class MainApp {
 		
 	}
 		
-		
-	
+	/**
+	 * Asks the Player if he would like to play Again
+	 * @param isInputValid Will remain false if input is invalid
+	 */
 	static void CheckGameOver() {
 		
 		boolean isInputValid = false;

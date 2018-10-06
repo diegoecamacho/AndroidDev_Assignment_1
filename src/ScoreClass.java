@@ -1,4 +1,9 @@
-
+/**
+ * <p>Score Class
+ * Keeps track of Current and High Score in Game
+ * </p>
+ * @author Diego Camacho 
+ */
 public class ScoreClass {
 	
 	int Score;
